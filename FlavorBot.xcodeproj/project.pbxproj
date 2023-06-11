@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C14F8C62A35152300389508 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C14F8C52A35152300389508 /* GoogleService-Info.plist */; };
+		8C14F8C92A3515FB00389508 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8C14F8C82A3515FB00389508 /* FirebaseAnalytics */; };
+		8C14F8CB2A3515FB00389508 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8C14F8CA2A3515FB00389508 /* FirebaseAuth */; };
+		8C14F8CD2A3515FB00389508 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8C14F8CC2A3515FB00389508 /* FirebaseFirestore */; };
+		8C14F8CF2A3515FB00389508 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8C14F8CE2A3515FB00389508 /* FirebaseFirestoreSwift */; };
+		8C14F8D12A3515FB00389508 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8C14F8D02A3515FB00389508 /* FirebaseStorage */; };
+		8C14F8D72A3518AA00389508 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C14F8D62A3518AA00389508 /* Model.swift */; };
 		8C2BFF4E2A2E3ED30082D369 /* FlavorBotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BFF4D2A2E3ED30082D369 /* FlavorBotApp.swift */; };
 		8C2BFF522A2E3ED40082D369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C2BFF512A2E3ED40082D369 /* Assets.xcassets */; };
 		8C2BFF552A2E3ED40082D369 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C2BFF542A2E3ED40082D369 /* Preview Assets.xcassets */; };
@@ -37,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C14F8C52A35152300389508 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8C14F8D62A3518AA00389508 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8C2BFF4A2A2E3ED30082D369 /* FlavorBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlavorBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2BFF4D2A2E3ED30082D369 /* FlavorBotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorBotApp.swift; sourceTree = "<group>"; };
 		8C2BFF512A2E3ED40082D369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,7 +56,7 @@
 		8C2BFF682A2E3ED40082D369 /* FlavorBotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorBotUITests.swift; sourceTree = "<group>"; };
 		8C2BFF6A2A2E3ED40082D369 /* FlavorBotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorBotUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8CE481372A2F9C880021FC41 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
-		8CE4817D2A30EF6B0021FC41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8CE4817D2A30EF6B0021FC41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CE4817E2A323B880021FC41 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		8CE481822A32C7110021FC41 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,7 +66,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C14F8CF2A3515FB00389508 /* FirebaseFirestoreSwift in Frameworks */,
+				8C14F8C92A3515FB00389508 /* FirebaseAnalytics in Frameworks */,
+				8C14F8CD2A3515FB00389508 /* FirebaseFirestore in Frameworks */,
+				8C14F8CB2A3515FB00389508 /* FirebaseAuth in Frameworks */,
 				8CE481862A32CD3A0021FC41 /* Inject in Frameworks */,
+				8C14F8D12A3515FB00389508 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +92,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C14F8D42A35185200389508 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8CE481372A2F9C880021FC41 /* LaunchView.swift */,
+				8CE481822A32C7110021FC41 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8C14F8D52A35187900389508 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C14F8D62A3518AA00389508 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8C2BFF412A2E3ED30082D369 = {
 			isa = PBXGroup;
 			children = (
@@ -101,12 +132,13 @@
 		8C2BFF4C2A2E3ED30082D369 /* FlavorBot */ = {
 			isa = PBXGroup;
 			children = (
-				8CE4817D2A30EF6B0021FC41 /* Info.plist */,
 				8C2BFF4D2A2E3ED30082D369 /* FlavorBotApp.swift */,
-				8CE481372A2F9C880021FC41 /* LaunchView.swift */,
-				8CE481822A32C7110021FC41 /* HomeView.swift */,
 				8CE4817E2A323B880021FC41 /* Shapes.swift */,
+				8C14F8D42A35185200389508 /* Views */,
+				8C14F8D52A35187900389508 /* Model */,
 				8C2BFF512A2E3ED40082D369 /* Assets.xcassets */,
+				8CE4817D2A30EF6B0021FC41 /* Info.plist */,
+				8C14F8C52A35152300389508 /* GoogleService-Info.plist */,
 				8C2BFF532A2E3ED40082D369 /* Preview Content */,
 			);
 			path = FlavorBot;
@@ -155,6 +187,11 @@
 			name = FlavorBot;
 			packageProductDependencies = (
 				8CE481852A32CD3A0021FC41 /* Inject */,
+				8C14F8C82A3515FB00389508 /* FirebaseAnalytics */,
+				8C14F8CA2A3515FB00389508 /* FirebaseAuth */,
+				8C14F8CC2A3515FB00389508 /* FirebaseFirestore */,
+				8C14F8CE2A3515FB00389508 /* FirebaseFirestoreSwift */,
+				8C14F8D02A3515FB00389508 /* FirebaseStorage */,
 			);
 			productName = FlavorBot;
 			productReference = 8C2BFF4A2A2E3ED30082D369 /* FlavorBot.app */;
@@ -230,6 +267,7 @@
 			mainGroup = 8C2BFF412A2E3ED30082D369;
 			packageReferences = (
 				8CE481842A32CD3A0021FC41 /* XCRemoteSwiftPackageReference "Inject" */,
+				8C14F8C72A3515FB00389508 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 8C2BFF4B2A2E3ED30082D369 /* Products */;
 			projectDirPath = "";
@@ -249,6 +287,7 @@
 			files = (
 				8C2BFF552A2E3ED40082D369 /* Preview Assets.xcassets in Resources */,
 				8C2BFF522A2E3ED40082D369 /* Assets.xcassets in Resources */,
+				8C14F8C62A35152300389508 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C14F8D72A3518AA00389508 /* Model.swift in Sources */,
 				8CE481382A2F9C880021FC41 /* LaunchView.swift in Sources */,
 				8CE481832A32C7110021FC41 /* HomeView.swift in Sources */,
 				8C2BFF4E2A2E3ED30082D369 /* FlavorBotApp.swift in Sources */,
@@ -617,6 +657,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8C14F8C72A3515FB00389508 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 		8CE481842A32CD3A0021FC41 /* XCRemoteSwiftPackageReference "Inject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
@@ -628,6 +676,31 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8C14F8C82A3515FB00389508 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C14F8C72A3515FB00389508 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		8C14F8CA2A3515FB00389508 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C14F8C72A3515FB00389508 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		8C14F8CC2A3515FB00389508 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C14F8C72A3515FB00389508 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		8C14F8CE2A3515FB00389508 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C14F8C72A3515FB00389508 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		8C14F8D02A3515FB00389508 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C14F8C72A3515FB00389508 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		8CE481852A32CD3A0021FC41 /* Inject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8CE481842A32CD3A0021FC41 /* XCRemoteSwiftPackageReference "Inject" */;
