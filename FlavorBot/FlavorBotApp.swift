@@ -10,11 +10,11 @@ import FirebaseCore
 
 //Configure Firebase
 class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-    return true
-  }
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        return true
+    }
 }
 
 @main
@@ -22,10 +22,12 @@ struct FlavorBotApp: App {
     
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    //Navigation Router
+    @StateObject var viewRouter : ViewRouter = ViewRouter()
     
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            MotherView(viewRouter: viewRouter).environmentObject(ViewRouter())
         }
     }
 }

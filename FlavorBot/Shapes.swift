@@ -36,16 +36,16 @@ extension Color {
         Scanner(string: hex).scanHexInt64(&int)
         let a, r, g, b: UInt64
         switch hex.count {
-        case 3: // RGB (12-bit)
-            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-        case 6: // RGB (24-bit)
-            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-        case 8: // ARGB (32-bit)
-            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
-        default:
-            (a, r, g, b) = (1, 1, 1, 0)
+            case 3: // RGB (12-bit)
+                (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+            case 6: // RGB (24-bit)
+                (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+            case 8: // ARGB (32-bit)
+                (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+            default:
+                (a, r, g, b) = (1, 1, 1, 0)
         }
-
+        
         self.init(
             .sRGB,
             red: Double(r) / 255,
@@ -569,6 +569,39 @@ struct TextLogo: Shape {
         path.addCurve(to: CGPoint(x: 0.92258*width, y: 0.76816*height), control1: CGPoint(x: 0.93146*width, y: 0.57347*height), control2: CGPoint(x: 0.92946*width, y: 0.6642*height))
         path.addCurve(to: CGPoint(x: 0.94987*width, y: 0.99887*height), control1: CGPoint(x: 0.91238*width, y: 0.92125*height), control2: CGPoint(x: 0.9288*width, y: 0.99887*height))
         path.addCurve(to: CGPoint(x: 0.99554*width, y: 0.86111*height), control1: CGPoint(x: 0.96583*width, y: 0.99887*height), control2: CGPoint(x: 0.98468*width, y: 0.95295*height))
+        path.closeSubpath()
+        return path
+    }
+}
+
+//Line Shape
+struct Line: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        let width = rect.size.width
+        let height = rect.size.height
+        
+        return path
+    }
+}
+
+//Right Arrow Shape
+struct RightArrow: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        let width = rect.size.width
+        let height = rect.size.height
+        path.move(to: CGPoint(x: 0.60229*width, y: 0.46523*height))
+        path.addCurve(to: CGPoint(x: 0.60229*width, y: 0.53477*height), control1: CGPoint(x: 0.63749*width, y: 0.48443*height), control2: CGPoint(x: 0.63749*width, y: 0.51557*height))
+        path.addLine(to: CGPoint(x: 0.06494*width, y: 0.82787*height))
+        path.addCurve(to: CGPoint(x: 0.06494*width, y: 0.93713*height), control1: CGPoint(x: 0.00963*width, y: 0.85804*height), control2: CGPoint(x: 0.00963*width, y: 0.90696*height))
+        path.addCurve(to: CGPoint(x: 0.26526*width, y: 0.93713*height), control1: CGPoint(x: 0.12026*width, y: 0.9673*height), control2: CGPoint(x: 0.20994*width, y: 0.9673*height))
+        path.addLine(to: CGPoint(x: 0.91641*width, y: 0.58196*height))
+        path.addCurve(to: CGPoint(x: 0.91641*width, y: 0.41804*height), control1: CGPoint(x: 0.99939*width, y: 0.5367*height), control2: CGPoint(x: 0.99939*width, y: 0.4633*height))
+        path.addLine(to: CGPoint(x: 0.26526*width, y: 0.06287*height))
+        path.addCurve(to: CGPoint(x: 0.06494*width, y: 0.06287*height), control1: CGPoint(x: 0.20994*width, y: 0.0327*height), control2: CGPoint(x: 0.12026*width, y: 0.0327*height))
+        path.addCurve(to: CGPoint(x: 0.06494*width, y: 0.17213*height), control1: CGPoint(x: 0.00963*width, y: 0.09304*height), control2: CGPoint(x: 0.00963*width, y: 0.14196*height))
+        path.addLine(to: CGPoint(x: 0.60229*width, y: 0.46523*height))
         path.closeSubpath()
         return path
     }

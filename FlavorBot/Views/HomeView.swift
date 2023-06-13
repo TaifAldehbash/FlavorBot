@@ -6,22 +6,22 @@
 //
 
 import SwiftUI
-import Inject
 
 struct HomeView: View {
-    @ObservedObject var inject = Inject.observer
+    //Navigation Router
+    @StateObject var viewRouter : ViewRouter
+    
     var body: some View {
         ZStack{
-            Text("Hello!")
+            Text("Home!")
         }.ignoresSafeArea()
-            .overlay(LaunchView())
-            .enableInjection()
+        //.overlay(LaunchView())
         
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(viewRouter: ViewRouter())
     }
 }

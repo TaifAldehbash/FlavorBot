@@ -24,6 +24,11 @@
 		8CE4817F2A323B880021FC41 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE4817E2A323B880021FC41 /* Shapes.swift */; };
 		8CE481832A32C7110021FC41 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE481822A32C7110021FC41 /* HomeView.swift */; };
 		8CE481862A32CD3A0021FC41 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 8CE481852A32CD3A0021FC41 /* Inject */; };
+		8CE77E382A36143A0016CC56 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE77E372A36143A0016CC56 /* OnboardingView.swift */; };
+		8CE77E3B2A3614E90016CC56 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE77E3A2A3614E90016CC56 /* PageViewController.swift */; };
+		8CE77E3D2A3616300016CC56 /* OnboardIllistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE77E3C2A3616300016CC56 /* OnboardIllistrationView.swift */; };
+		8CE77E3F2A37DB6F0016CC56 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE77E3E2A37DB6F0016CC56 /* MotherView.swift */; };
+		8CE77E412A3812F10016CC56 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE77E402A3812F10016CC56 /* SignInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		8CE4817D2A30EF6B0021FC41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CE4817E2A323B880021FC41 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		8CE481822A32C7110021FC41 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8CE77E372A36143A0016CC56 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		8CE77E3A2A3614E90016CC56 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		8CE77E3C2A3616300016CC56 /* OnboardIllistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardIllistrationView.swift; sourceTree = "<group>"; };
+		8CE77E3E2A37DB6F0016CC56 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
+		8CE77E402A3812F10016CC56 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				8CE481372A2F9C880021FC41 /* LaunchView.swift */,
+				8CE77E372A36143A0016CC56 /* OnboardingView.swift */,
+				8CE77E402A3812F10016CC56 /* SignInView.swift */,
 				8CE481822A32C7110021FC41 /* HomeView.swift */,
+				8CE77E3C2A3616300016CC56 /* OnboardIllistrationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -133,8 +146,10 @@
 			isa = PBXGroup;
 			children = (
 				8C2BFF4D2A2E3ED30082D369 /* FlavorBotApp.swift */,
+				8CE77E3E2A37DB6F0016CC56 /* MotherView.swift */,
 				8CE4817E2A323B880021FC41 /* Shapes.swift */,
 				8C14F8D42A35185200389508 /* Views */,
+				8CE77E392A3614B50016CC56 /* Controller */,
 				8C14F8D52A35187900389508 /* Model */,
 				8C2BFF512A2E3ED40082D369 /* Assets.xcassets */,
 				8CE4817D2A30EF6B0021FC41 /* Info.plist */,
@@ -167,6 +182,14 @@
 				8C2BFF6A2A2E3ED40082D369 /* FlavorBotUITestsLaunchTests.swift */,
 			);
 			path = FlavorBotUITests;
+			sourceTree = "<group>";
+		};
+		8CE77E392A3614B50016CC56 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8CE77E3A2A3614E90016CC56 /* PageViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,9 +336,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C14F8D72A3518AA00389508 /* Model.swift in Sources */,
+				8CE77E3B2A3614E90016CC56 /* PageViewController.swift in Sources */,
 				8CE481382A2F9C880021FC41 /* LaunchView.swift in Sources */,
 				8CE481832A32C7110021FC41 /* HomeView.swift in Sources */,
+				8CE77E412A3812F10016CC56 /* SignInView.swift in Sources */,
+				8CE77E3F2A37DB6F0016CC56 /* MotherView.swift in Sources */,
+				8CE77E382A36143A0016CC56 /* OnboardingView.swift in Sources */,
 				8C2BFF4E2A2E3ED30082D369 /* FlavorBotApp.swift in Sources */,
+				8CE77E3D2A3616300016CC56 /* OnboardIllistrationView.swift in Sources */,
 				8CE4817F2A323B880021FC41 /* Shapes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,17 +15,20 @@ struct LaunchView: View {
     @State var logoAnimation: Bool = false
     @State var endAnimation: Bool = false
     @State var finishAnimation: Bool = false
-    @ObservedObject var inject = Inject.observer
+    
+    //Navigation Router
+    @StateObject var viewRouter : ViewRouter
+    
     var body: some View {
         if !finishAnimation{
             HStack{
                 ZStack{
                     Color("MidPurple")
                     Group{
-                    VStack{
-                        Logo().frame(width: width(w: 110), height: height(h: 110)).scaleEffect(logoAnimation ? 1:0).foregroundColor(Color(hex: "AED768")).padding(EdgeInsets(top: 0, leading: 0, bottom: height(h: 20), trailing: 0))
-                        TextLogo().trim(from: 0, to: startAnimation ? 1 : 0 ).frame(width: width(w: 290), height: height(h: 90)).foregroundColor(Color(hex: "AED768"))
-                    }
+                        VStack{
+                            Logo().frame(width: width(w: 110), height: height(h: 110)).scaleEffect(logoAnimation ? 1:0).foregroundColor(Color(hex: "AED768")).padding(EdgeInsets(top: 0, leading: 0, bottom: height(h: 20), trailing: 0))
+                            TextLogo().trim(from: 0, to: startAnimation ? 1 : 0 ).frame(width: width(w: 290), height: height(h: 90)).foregroundColor(Color(hex: "AED768"))
+                        }
                     }.frame(width: UIScreen.main.bounds.size.width,height: UIScreen.main.bounds.size.height)
                         .scaleEffect(endAnimation ? 0.15:0.9)
                     
@@ -50,50 +53,25 @@ struct LaunchView: View {
                             DispatchQueue.main.asyncAfter(deadline: .now()+5){
                                 withAnimation(){
                                     finishAnimation.toggle()
+                                    if !UserDefaults.standard.bool(forKey: "didLaunchBefore"){
+                                        UserDefaults.standard.set(true, forKey: "didLaunchBefore")
+                                        viewRouter.currentPage = .OnBoard
+                                    }else{
+                                        viewRouter.currentPage = .Home
+                                    }
+                                    
                                 }
                             }
                         }
                         
                     }
-            }.enableInjection()
+            }
         }
     }
 }
 
 struct LaunchView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchView()
+        LaunchView(viewRouter: ViewRouter())
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
