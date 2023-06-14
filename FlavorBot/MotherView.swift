@@ -17,6 +17,7 @@ struct MotherView: View {
                 case .Launch : LaunchView(viewRouter: viewRouter)
                 case .OnBoard : OnboardingView(viewRouter: viewRouter)
                 case .SignIn : SignInView(viewRouter: viewRouter)
+                case .SignUp : SignUpView(viewRouter: viewRouter)
                 case .Home : HomeView(viewRouter: viewRouter)
                 default:
                     HomeView(viewRouter: viewRouter)
@@ -35,6 +36,7 @@ enum Page {
     case Launch
     case OnBoard
     case SignIn
+    case SignUp
     case Home
 }
 
