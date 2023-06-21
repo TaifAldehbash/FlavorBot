@@ -10,18 +10,28 @@ import SwiftUI
 struct MotherView: View {
     //Navigation Router
     @StateObject var viewRouter : ViewRouter
+    @ObservedObject var sessionStore = FoodBotDB()
+    
+    init(viewRouter : ViewRouter) {
+        self._viewRouter = StateObject<ViewRouter>(wrappedValue: viewRouter)
+        sessionStore.listen()
+    }
     
     var body: some View {
         VStack{
-            switch viewRouter.currentPage {
-                case .Launch : LaunchView(viewRouter: viewRouter)
-                case .OnBoard : OnboardingView(viewRouter: viewRouter)
-                case .SignIn : SignInView(viewRouter: viewRouter)
-                case .SignUp : SignUpView(viewRouter: viewRouter)
-                case .Home : HomeView(viewRouter: viewRouter)
-                default:
-                    HomeView(viewRouter: viewRouter)
-            }
+            //if !self.sessionStore.isAnon {
+                switch viewRouter.currentPage {
+                    case .Launch : LaunchView(viewRouter: viewRouter)
+                    case .OnBoard : OnboardingView(viewRouter: viewRouter)
+                    case .SignIn : SignInView(viewRouter: viewRouter)
+                    case .SignUp : SignUpView(viewRouter: viewRouter)
+                    case .Home : HomeView(viewRouter: viewRouter)
+                    default:
+                        HomeView(viewRouter: viewRouter)
+                }
+            //}else{
+                //SignInView(viewRouter: viewRouter)
+            //}
         }
     }
 }
@@ -41,6 +51,6 @@ enum Page {
 }
 
 class ViewRouter : ObservableObject {
-    @Published var currentPage: Page = .Launch
+    @Published var currentPage: Page = .Home//.Launch
     
 }

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-//function used to dynamically configure width based on device dimensions
+//Function used to dynamically configure width based on device dimensions
 func width (w:CGFloat) -> CGFloat{
     //this const is to store the width of an iPhone14 (the device the UI is tested)
     let w14=UIScreen.main.bounds.size.width
@@ -18,7 +18,7 @@ func width (w:CGFloat) -> CGFloat{
     return w*wDevice/w14
 }
 
-//function used to dynamically configure height based on device dimensions
+//Function used to dynamically configure height based on device dimensions
 func height (h:CGFloat) -> CGFloat{
     //this var is to store the height of an iPhone14 (the device the UI is tested)
     let h14=UIScreen.main.bounds.size.height
@@ -53,6 +53,34 @@ extension Color {
             blue:  Double(b) / 255,
             opacity: Double(a) / 255
         )
+    }
+}
+
+//Hide & Show View
+extension View {
+    /// Hide or show the view based on a boolean value.
+    ///
+    /// Example for visibility:
+    ///
+    ///     Text("Label")
+    ///         .isHidden(true)
+    ///
+    /// Example for complete removal:
+    ///
+    ///     Text("Label")
+    ///         .isHidden(true, remove: true)
+    ///
+    /// - Parameters:
+    ///   - hidden: Set to `false` to show the view. Set to `true` to hide the view.
+    ///   - remove: Boolean value indicating whether or not to remove the view.
+    @ViewBuilder func isHidden(_ hidden: Bool, remove: Bool = false) -> some View {
+        if hidden {
+            if !remove {
+                self.hidden()
+            }
+        } else {
+            self
+        }
     }
 }
 

@@ -30,6 +30,7 @@
 		8CE77E3F2A37DB6F0016CC56 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE77E3E2A37DB6F0016CC56 /* MotherView.swift */; };
 		8CE77E412A3812F10016CC56 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE77E402A3812F10016CC56 /* SignInView.swift */; };
 		8CE77E432A39BDFA0016CC56 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE77E422A39BDFA0016CC56 /* SignUpView.swift */; };
+		8CE77E452A3DD8280016CC56 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE77E442A3DD8280016CC56 /* Classes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		8CE77E3E2A37DB6F0016CC56 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
 		8CE77E402A3812F10016CC56 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		8CE77E422A39BDFA0016CC56 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		8CE77E442A3DD8280016CC56 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				8C14F8D62A3518AA00389508 /* Model.swift */,
+				8CE77E442A3DD8280016CC56 /* Classes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			files = (
 				8C14F8D72A3518AA00389508 /* Model.swift in Sources */,
 				8CE77E3B2A3614E90016CC56 /* PageViewController.swift in Sources */,
+				8CE77E452A3DD8280016CC56 /* Classes.swift in Sources */,
 				8CE481382A2F9C880021FC41 /* LaunchView.swift in Sources */,
 				8CE481832A32C7110021FC41 /* HomeView.swift in Sources */,
 				8CE77E412A3812F10016CC56 /* SignInView.swift in Sources */,

@@ -15,7 +15,6 @@ struct HomeView: View {
         ZStack{
             Text("Home!")
         }.ignoresSafeArea()
-        //.overlay(LaunchView())
         
     }
 }
